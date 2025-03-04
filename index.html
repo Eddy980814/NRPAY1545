@@ -7,38 +7,51 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>NR Pay 金流系統</h1>
-  <p class="version">版本 8.3.17</p>
+  <header>
+    <h1>NR Pay 金流系統</h1>
+    <nav>
+      <button onclick="showPage('loginPage')">登入</button>
+      <button onclick="showPage('balancePage')">查餘額</button>
+      <button onclick="showPage('transferPage')">轉帳</button>
+      <button onclick="showPage('withdrawPage')">提款</button>
+    </nav>
+  </header>
 
-  <div class="section">
-    <h2>登入</h2>
-    <input type="text" id="loginUserId" placeholder="用戶ID">
-    <input type="password" id="loginPassword" placeholder="密碼">
-    <button onclick="login()">登入</button>
-    <p id="loginResult"></p>
-  </div>
+  <main>
+    <section id="loginPage" class="page">
+      <h2>登入</h2>
+      <input type="text" id="loginUserId" placeholder="用戶ID">
+      <input type="password" id="loginPassword" placeholder="密碼">
+      <button onclick="login()">登入</button>
+      <p id="loginResult"></p>
+    </section>
 
-  <div class="section">
-    <h2>查詢餘額</h2>
-    <button onclick="checkBalance()">查詢</button>
-    <p id="balanceResult"></p>
-  </div>
+    <section id="balancePage" class="page hidden">
+      <h2>查詢餘額</h2>
+      <button onclick="checkBalance()">查詢</button>
+      <p id="balanceResult"></p>
+    </section>
 
-  <div class="section">
-    <h2>站內轉帳</h2>
-    <input type="text" id="toBankCode" placeholder="銀行代號">
-    <input type="text" id="toAccount" placeholder="對方帳號">
-    <input type="number" id="transferAmount" placeholder="金額">
-    <button onclick="transfer()">轉帳</button>
-    <p id="transferResult"></p>
-  </div>
+    <section id="transferPage" class="page hidden">
+      <h2>站內轉帳</h2>
+      <input type="text" id="toBankCode" placeholder="銀行代號">
+      <input type="text" id="toAccount" placeholder="帳戶">
+      <input type="number" id="transferAmount" placeholder="金額">
+      <button onclick="transfer()">轉帳</button>
+      <p id="transferResult"></p>
+    </section>
 
-  <div class="section">
-    <h2>提款</h2>
-    <input type="number" id="withdrawAmount" placeholder="金額">
-    <button onclick="withdraw()">提款</button>
-    <p id="withdrawResult"></p>
-  </div>
+    <section id="withdrawPage" class="page hidden">
+      <h2>提款</h2>
+      <input type="number" id="withdrawAmount" placeholder="金額">
+      <button onclick="withdraw()">提款</button>
+      <p id="withdrawResult"></p>
+    </section>
+  </main>
+
+  <footer>
+    版本 8.3.17
+  </footer>
 
   <script src="script.js"></script>
 </body>
