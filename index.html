@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NR Pay 金流系統 v8.3.17</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>NR Pay 金流系統</h1>
+  <p class="version">版本 8.3.17</p>
+
+  <div class="section">
+    <h2>登入</h2>
+    <input type="text" id="loginUserId" placeholder="用戶ID">
+    <input type="password" id="loginPassword" placeholder="密碼">
+    <button onclick="login()">登入</button>
+    <p id="loginResult"></p>
+  </div>
+
+  <div class="section">
+    <h2>查詢餘額</h2>
+    <button onclick="checkBalance()">查詢</button>
+    <p id="balanceResult"></p>
+  </div>
+
+  <div class="section">
+    <h2>站內轉帳</h2>
+    <input type="text" id="toBankCode" placeholder="銀行代號">
+    <input type="text" id="toAccount" placeholder="對方帳號">
+    <input type="number" id="transferAmount" placeholder="金額">
+    <button onclick="transfer()">轉帳</button>
+    <p id="transferResult"></p>
+  </div>
+
+  <div class="section">
+    <h2>提款</h2>
+    <input type="number" id="withdrawAmount" placeholder="金額">
+    <button onclick="withdraw()">提款</button>
+    <p id="withdrawResult"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
