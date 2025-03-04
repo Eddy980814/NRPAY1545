@@ -1,5 +1,5 @@
 const users = {
-  '1': { password: '1', balance: 9999 },
+  'user1': { password: 'abc123', balance: 1000 },
   'user2': { password: 'def456', balance: 2000 },
   'user3': { password: 'ghi789', balance: 3000 },
   // 繼續加到 user20
